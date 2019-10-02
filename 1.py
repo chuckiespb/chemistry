@@ -46,7 +46,7 @@ GPIO.setup(b4, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 while True:
     if GPIO.input(a) == False:
         os.system('sudo killall omxplayer.bin')
-        os.system('cvlc /home/pi/Videos/1.mov') 
+        os.system('omxplayer /home/pi/Videos/1.mov') 
     else:
         os.system('sudo killall omxplayer.bin')
     if GPIO.input(b) == False:
